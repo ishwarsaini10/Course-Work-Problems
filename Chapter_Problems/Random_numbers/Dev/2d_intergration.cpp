@@ -25,13 +25,13 @@ double myrand(double low, double high){
 }
 
 double f(double x, double y){
-    return(x*pow(y,2));
+    return(1.0-pow(x,2)-pow(y,2));
 }
 
 int main(){
     double x_1  = 0       ;
     double y_1  = 0       ;
-    double x_2  = 2       ;
+    double x_2  = 1       ;
     double y_2  = 1       ;
     double x       ;
     double y       ;
