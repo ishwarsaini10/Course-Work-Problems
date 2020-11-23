@@ -24,7 +24,7 @@ double myrand(double low, double high){
 }
 
 double f(double x){
-    return(pow(x,1.5));
+    return(pow(x,2));
 }
 
 /* Code to calculate Integration using Simpson's rule */
