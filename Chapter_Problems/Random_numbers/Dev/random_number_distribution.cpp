@@ -28,16 +28,17 @@ double myrand(double low, double high){
 int random_number_distribution(){
     double a  ;
     TRandom *R    = new TRandom();
-    TH1F *hist1   = new TH1F("hist1", "Random Number Distribution", 50,1,10);
+    TH1F *hist1   = new TH1F("hist1", "Random Number Distribution", 1000,-10,10);
     TCanvas *c1   = new TCanvas("c1","multipads",1100,1000);
     gStyle->SetOptStat(0);
     srand(time(0))    ;
 
     for(int i=1;  i<10000;  i++){
-        a = R ->  Poisson(5);
+        a = R ->  Gaus(0,1);
         hist1 ->  Fill(a);
     }
     hist1  ->  Draw();
+    hist1  ->  SetFillColor(kOrange);
     return 0;
 }
         
