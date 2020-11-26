@@ -41,12 +41,14 @@ double myrand(double low, double high){
 int previous_year_q1(){
     double  a   = -sqrt(M_PI/2.0)  ;
     double  b   = 2.0*sqrt(M_PI/2.0)  ;
+//    double  a   = 0.0 ;
+//    double  b   = 2.0*sqrt(M_PI/2.0)  ;
     double  x         ;
     int N = 50        ;
 
     TH1 *hist = new TH1F("hist", "Distribution",  N,  a,  b);
 
-    for(int i=1;  i<=1000; i++){
+    for(int i=1;  i<=10000; i++){
         x = myrand(0.0, sqrt(M_PI/2.0));
         hist  ->  Fill(f(x));
         std::cout <<  i <<  "\t"  <<  x <<  std::endl;
