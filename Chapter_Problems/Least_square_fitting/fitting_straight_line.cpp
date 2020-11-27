@@ -26,6 +26,10 @@ int main(){
     double  den               ; /*  Denominator                         */
     double  a                 ; /*  Parameter a value                   */
     double  b                 ; /*  Parameter b value                   */
+    double  sigma_y = 0.0     ; /*  Error in y                          */
+    double  sigma_a = 0.0     ; /*  Error in a                          */
+    double  sigma_b = 0.0     ; /*  Error in b                          */
+    double  temp    = 0.0     ;
     std::ifstream myfile      ; /*  Input file                          */
     myfile.open("data.txt")   ; /*  Opens file containing data          */
 
@@ -43,9 +47,17 @@ int main(){
     den = n*sx2 - pow(sx,2) ;
     a   = (sx2*sy - sx*sxy)/den ;
     b   = (n*sxy - sx*sy)/den   ;
-    std::cout <<  "a = "  <<  a <<  std::endl;
-    std::cout <<  "b = "  <<  b <<  std::endl;
 
+    for(int i=0;  i<n;  i++){   /*  Loop to calculate the error in y    */
+        temp  = pow(y[i]-a-b*x[i],2)  ;
+        std::cout <<  temp  <<  std::endl ;
+    }
+    sigma_y = sqrt(temp/(n-2))      ; /* Error in Y */
+    sigma_a = sigma_y*sqrt(sx2/den) ; /* Error in a */   
+    sigma_b = sigma_y*sqrt(n/den)   ; /* Error in b */
+
+    std::cout <<  "a = "  <<  a <<  "\t"  << sigma_a  << std::endl;
+    std::cout <<  "b = "  <<  b <<  "\t"  << sigma_b  << std::endl;
 
     return 0;
 
