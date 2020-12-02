@@ -75,7 +75,7 @@ int generating_a_function_v2(){
     
     double  x         ;
     double  y         ;
-    int N = 10        ;
+    int N = 20        ;
 
     TH1 *hist = new TH1F("hist", "Distribution",  N,  a,  b);
 
@@ -93,6 +93,6 @@ int generating_a_function_v2(){
         }
     }
     
-    hist  ->  Draw();
+    hist  ->  DrawNormalized();
     return 0;
 }
