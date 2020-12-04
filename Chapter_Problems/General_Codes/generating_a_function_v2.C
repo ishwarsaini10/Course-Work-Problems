@@ -94,5 +94,8 @@ int generating_a_function_v2(){
     }
     
     hist  ->  DrawNormalized();
+    TF1 *f1 = new TF1("f1","2.0*x*TMath::Cos(x*x)", a,b)  ;
+    TCanvas *c2 = new TCanvas();
+    f1->Draw();
     return 0;
 }
