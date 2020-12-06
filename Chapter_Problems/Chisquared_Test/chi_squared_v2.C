@@ -1,3 +1,4 @@
+
 /*
  * Name - Ishwar Singh
  * Date - 02.12.2020
@@ -22,12 +23,9 @@ int chi_squared_test(){
     double  O[n]                    ; /*  Array to store Observed Numbers in Bin  */
     double  E[n]                    ; /*  Array to store Expected Numbers in Bin  */
     std::ifstream myfile            ; /*  Reading data from the file              */
-    std::ifstream myfile_1          ; /*  Reading data from the file              */
+    std::ifstream myfile            ; /*  Reading data from the file              */
     myfile.open("data_file.txt")    ;
-    myfile.open("data_file_1.txt")  ;
     double  s1  = 0.0               ; /*  Stores sum                              */
-
-    TH1 *hist = new TH1F("hist", N, );
 
     for(int i=0;  i<n;  i++){
         myfile  >>  O[i]  >>  E[i]  ;
