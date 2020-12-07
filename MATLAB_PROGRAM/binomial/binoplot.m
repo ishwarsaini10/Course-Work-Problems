@@ -21,3 +21,4 @@ sigma=sqrt(n*p*q);                %mean and deviation
 
 disp(['mean is  ',num2str(mean)]);
 disp(['deviation is  ',num2str(sigma)]);
+%this ia new comment
