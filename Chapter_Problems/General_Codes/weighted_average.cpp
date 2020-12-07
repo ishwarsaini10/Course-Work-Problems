@@ -1,24 +1,33 @@
+
 /*
  * Name     - Ishwar  Singh
  * Email    - isingh@fnal.gov
  * Purpose  - To find the mean and standard deviation of the data with different stdev.
- * Date     - 31.10.202
+ * Date     - 07.12.2020
  
 C++ Directives */
 
 #include<iostream>
+#include<fstream>
 #include<math.h>
 #include<stdio.h>
 
 int main(){
-    float x[3]    = {11,  12, 10}                  ;
-    float sig[3]  = {1, 1,  3}                  ;
+    const int n   = 3 ;
+    std::ifstream myfile  ;
+    myfile.open("data_file.txt")  ;
+    float x[n]   ; 
+    float sig[n] ;
     float sum1    = 0.0                                     ;
     float sum2    = 0.0                                     ;
     float mean                                              ;
     float stdev                                             ;
 
-    for(int i=0;  i<4;  i++){
+    for(int i=0;i<n;i++){
+        myfile  >>  x[i]  >>  sig[i]  ;
+    }
+
+    for(int i=0;  i<n;  i++){
         sum1+=x[i]/(pow(sig[i],2))                          ;
         sum2+=1.0/(pow(sig[i],2))                           ;
     }
@@ -30,7 +39,3 @@ int main(){
     return 0                                                ;
 
 }
-    
-
-
-

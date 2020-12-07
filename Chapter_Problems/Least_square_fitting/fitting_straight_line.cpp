@@ -31,7 +31,9 @@ int main(){
     double  sigma_b = 0.0     ; /*  Error in b                          */
     double  temp    = 0.0     ;
     std::ifstream myfile      ; /*  Input file                          */
+    std::ofstream myfile_1      ; /*  Input file                          */
     myfile.open("data.txt")  ; /*  Opens file containing data          */
+    myfile_1.open("fitted_data.txt")  ; /*  Opens file containing data          */
 
     for(int i=0; i<n; i++){   /*  Loop to store data in corresponding arrays  */
         myfile  >>  x[i]  >>  y[i]  ;
@@ -59,6 +61,9 @@ int main(){
     std::cout <<  "a = "  <<  a <<  "\t"  << sigma_a  << std::endl;
     std::cout <<  "b = "  <<  b <<  "\t"  << sigma_b  << std::endl;
 
+    for(int i=0;  i<n;  i++){
+        myfile_1  <<  x[i]  <<  "\t"  <<  a+b*x[i]  <<  std::endl;
+    }
     return 0;
 
 }
