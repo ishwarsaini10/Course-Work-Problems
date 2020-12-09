@@ -51,13 +51,14 @@ int main(){
     b   = (n*sxy - sx*sy)/den   ;
 
     for(int i=0;  i<n;  i++){   /*  Loop to calculate the error in y    */
-        temp  = pow(y[i]-a-b*x[i],2)  ;
+        temp+=pow(y[i]-a-b*x[i],2)  ;
         std::cout <<  temp  <<  std::endl ;
     }
     sigma_y = sqrt(temp/(n-2))      ; /* Error in Y */
     sigma_a = sigma_y*sqrt(sx2/den) ; /* Error in a */   
     sigma_b = sigma_y*sqrt(n/den)   ; /* Error in b */
-
+    std::cout <<  "Delta  = " <<  den <<  std::endl                   ;
+    std::cout <<  "Error in Y = "    <<  sigma_y   <<  std::endl                   ;
     std::cout <<  "a = "  <<  a <<  "\t"  << sigma_a  << std::endl;
     std::cout <<  "b = "  <<  b <<  "\t"  << sigma_b  << std::endl;
 

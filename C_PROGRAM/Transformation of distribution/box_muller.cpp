@@ -1,6 +1,5 @@
 // program to convert uniform distribution into gaussian using box-muller transformation
 # include <stdio.h>
-# include<conio.h>
 # include <math.h>
 # include <stdlib.h>
 int main()
@@ -28,6 +27,6 @@ int main()
     	fprintf(data4,"\n %f \t %f \n",z,pz);
 	}
 	fclose(data4);
-	getch();
+    return 0;
 	
 }

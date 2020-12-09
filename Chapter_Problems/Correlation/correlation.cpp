@@ -17,7 +17,7 @@ int main(){
     float std_y         ;
     float std_xy  = 0.0        ;
     std::ifstream  my_file ;
-    my_file.open("data_for_correlation.txt");      //  Opens A.txt
+    my_file.open("lineardata.txt");      //  Opens A.txt
 
     for(int i=0;  i<n; i++){
         my_file >>  x[i]  >>  y[i]  ;    //  Extracts data from A.txt
