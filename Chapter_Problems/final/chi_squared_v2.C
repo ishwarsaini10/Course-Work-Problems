@@ -1,3 +1,4 @@
+
 /*
  * Name - Ishwar Singh
  * Date - 02.12.2020
@@ -14,18 +15,16 @@
 #include<cfloat>
 
 
-/*  ROOT Directives */
-#include<TH1.h>
+
 
 int chi_squared_test(){
-    const int n = 10                 ;
+    const int n = 6                 ;
     double  O[n]                    ; /*  Array to store Observed Numbers in Bin  */
     double  E[n]                    ; /*  Array to store Expected Numbers in Bin  */
     std::ifstream myfile            ; /*  Reading data from the file              */
-    std::ifstream myfile_1          ; /*  Reading data from the file              */
+    std::ifstream myfile            ; /*  Reading data from the file              */
     myfile.open("chidata.txt")    ;
     double  s1  = 0.0               ; /*  Stores sum                              */
-
 
     for(int i=0;  i<n;  i++){
         myfile  >>  O[i]  >>  E[i]  ;

@@ -34,7 +34,7 @@ int main(){
     double  sigma_b = 0.0     ; /*  Error in b                          */
     double  temp    = 0.0     ;
     std::ifstream myfile      ; /*  Input file                          */
-    myfile.open("data1.txt")   ; /*  Opens file containing data          */
+    myfile.open("data1.txt")  ; /*  Opens file containing data          */
 
     for(int i=0; i<n; i++){   /*  Loop to store data in corresponding arrays  */
         myfile  >>  x[i]  >>  y[i] >> sig[i]  ;

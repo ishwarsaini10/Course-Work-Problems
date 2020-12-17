@@ -6,7 +6,7 @@
 #include<iomanip>
 
 int main(){
-    int n = 30          ;
+    int n = 655          ;
     float data[n]       ; // Array to store data of A.txt
     float data2[n]      ; // Array to store data of B.txt
     float mean          ; //  Stores the value of mean for A
@@ -17,7 +17,7 @@ int main(){
     float sum2 = 0.0    ;
     std::ifstream  my_file ;
     std::ifstream  my_file2;
-    my_file.open("A.txt");      //  Opens A.txt
+    my_file.open("gaussian.txt");      //  Opens A.txt
     my_file2.open("B.txt");     //  Opens B.txt 
 
     for(int i=0;  i<n; i++){
